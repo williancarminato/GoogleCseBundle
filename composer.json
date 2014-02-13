@@ -1,0 +1,24 @@
+{
+    "name": "williancarminato/google-cse-bundle",
+    "description": "A Symfony2 Bundle who uses Google Custom Search API",
+    "homepage": "http://github.com/williancarminato/GoogleCseBundle",
+    "license": "MIT",
+    "keywords": ["google", "search", "google-custom-search"],
+    "type": "symfony-bundle",
+    "authors": [
+        {
+            "name": "Willian Campideli Carminato",
+            "email": "williancarminato@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.3",
+        "symfony/framework-bundle": "~2.4"
+    },
+    "autoload" : {
+        "psr-0" : {
+            "Carminato\\GoogleCseBundle" : ""
+        }
+    },
+    "target-dir": "Carminato/GoogleCseBundle"
+}
