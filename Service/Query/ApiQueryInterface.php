@@ -2,11 +2,17 @@
 
 namespace Carminato\GoogleCseBundle\Service\Query;
 
-use Symfony\Component\HttpFoundation\ParameterBag;
-
 interface ApiQueryInterface
 {
-    public function setParameter(ParameterBag $parameters);
+    public function addParameters(array $parameters);
 
     public function addParameter($key, $value);
+
+    public function removeParameter($key);
+
+    public function hasParameter($key);
+
+    public function getParameter($key);
+
+    public function getQueryString();
 } 
