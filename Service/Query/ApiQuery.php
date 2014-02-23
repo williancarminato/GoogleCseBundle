@@ -13,7 +13,9 @@ class ApiQuery implements ApiQueryInterface
 
     public function addParameters(array $parameters)
     {
-        // TODO: Implement addParameters() method.
+        $this->parameters = array_merge($this->parameters, $parameters);
+
+        return $this;
     }
 
     /**
@@ -34,9 +36,13 @@ class ApiQuery implements ApiQueryInterface
 
     public function removeParameter($key)
     {
-        // TODO: Implement removeParameter() method.
-    }
+        if (empty($key)) {
+            throw new \InvalidArgumentException('Missing $key parameter');
+        }
+        unset($this->parameters[$key]);
 
+        return $this;
+    }
 
     /**
      * @param $key

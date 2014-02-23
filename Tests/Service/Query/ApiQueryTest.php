@@ -131,5 +131,152 @@ class ApiQueryTest extends \PHPUnit_Framework_TestCase
         $query = new ApiQuery();
         $query->getParameter(null);
     }
+
+    /**
+     * @covers \Carminato\GoogleCseBundle\Service\Query\ApiQuery::removeParameter
+     * @depends testAddParameterWithValidInputShouldSuccess
+     */
+    public function testRemoveParameterAfterAddParameterShouldSuccess()
+    {
+        $query = new ApiQuery();
+        $key = 'test_key';
+        $value = 'test_value';
+        $query->addParameter($key, $value);
+
+        $this->assertTrue($query->hasParameter($key));
+
+        $fluent = $query->removeParameter($key);
+
+        $this->assertFalse($query->hasParameter($key));
+        $this->assertInstanceOf(get_class($query), $fluent);
+    }
+
+    /**
+     * @covers \Carminato\GoogleCseBundle\Service\Query\ApiQuery::removeParameter
+     */
+    public function testRemoveParameterWithNonExistentKeyShouldSuccess()
+    {
+        $query = new ApiQuery();
+        $key = 'test_key';
+
+        $this->assertFalse($query->hasParameter($key));
+
+        $fluent = $query->removeParameter($key);
+
+        $this->assertFalse($query->hasParameter($key));
+        $this->assertInstanceOf(get_class($query), $fluent);
+    }
+
+    /**
+     * @covers \Carminato\GoogleCseBundle\Service\Query\ApiQuery::removeParameter
+     * @expectedException \PHPUnit_Framework_Error
+     */
+    public function testRemoveParameterWithoutParameterShouldFail(){
+        $query = new ApiQuery();
+        $query->removeParameter();
+    }
+
+    /**
+     * @covers \Carminato\GoogleCseBundle\Service\Query\ApiQuery::removeParameter
+     * @expectedException \InvalidArgumentException
+     */
+    public function testRemoveParameterInvalidParameterShouldFail(){
+        $query = new ApiQuery();
+        $query->removeParameter(null);
+    }
+
+    /**
+     * @covers \Carminato\GoogleCseBundle\Service\Query\ApiQuery::addParameters
+     */
+    public function testAddParametersWithSimpleArrayShouldSuccess()
+    {
+        $query = new ApiQuery();
+
+        $parameters = array(
+            'parameter1' => 'value 1',
+            'parameter2' => 'value 2',
+            'parameter3' => 'value 3'
+        );
+
+        $fluent = $query->addParameters($parameters);
+
+        $this->assertEquals(
+            $parameters['parameter1'], $query->getParameter('parameter1')
+        );
+        $this->assertEquals(
+            $parameters['parameter2'], $query->getParameter('parameter2')
+        );
+        $this->assertEquals(
+            $parameters['parameter3'], $query->getParameter('parameter3')
+        );
+        $this->assertInstanceOf(get_class($query), $fluent);
+    }
+
+    /**
+     * @covers \Carminato\GoogleCseBundle\Service\Query\ApiQuery::addParameters
+     */
+    public function testAddParametersWithArrayObjectShouldSuccess()
+    {
+        $query = new ApiQuery();
+
+        $parameters = array(
+            'parameter1' => 'value 1',
+            'parameter2' => 'value 2',
+            'parameter3' => 'value 3'
+        );
+        $parameterObject = new \ArrayObject($parameters);
+
+        $query->addParameters($parameters);
+
+        $this->assertEquals(
+            $parameterObject->offsetGet('parameter1'),
+            $query->getParameter('parameter1')
+        );
+    }
+
+    public function testAddParametersWithExistentParametersShouldOverridesParameterAndMerge(){
+        $query = new ApiQuery();
+        $value1 = 'value to override';
+        $value2 = 'value 2';
+        $query->addParameter('parameter1', $value1);
+        $query->addParameter('parameter2', $value2);
+
+        $parameters = array(
+            'parameter1' => 'value 1',
+            'parameter3' => 'value 3',
+            'parameter4' => 'value 4'
+        );
+
+        $fluent = $query->addParameters($parameters);
+
+        $this->assertEquals(
+            $parameters['parameter1'], $query->getParameter('parameter1')
+        );
+        $this->assertEquals(
+            $value2, $query->getParameter('parameter2')
+        );
+        $this->assertEquals(
+            $parameters['parameter4'], $query->getParameter('parameter4')
+        );
+        $this->assertInstanceOf(get_class($query), $fluent);
+    }
+
+    /**
+     * @covers \Carminato\GoogleCseBundle\Service\Query\ApiQuery::addParameters
+     * @expectedException \PHPUnit_Framework_Error
+     */
+    public function testaddParametersWithInvalidParameterShouldFail(){
+        $query = new ApiQuery();
+        $query->addParameters(null);
+    }
+
+    /**
+     * @covers \Carminato\GoogleCseBundle\Service\Query\ApiQuery::addParameters
+     * @expectedException \PHPUnit_Framework_Error
+     */
+    public function testaddParametersWithoutParameterShouldFail(){
+        $query = new ApiQuery();
+        $query->addParameters(null);
+    }
 }
  
