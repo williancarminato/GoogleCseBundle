@@ -86,8 +86,48 @@ class ApiQueryTest extends \PHPUnit_Framework_TestCase
     public function testHasParameterWithoutParameter()
     {
         $query = new ApiQuery();
+
         $query->hasParameter();
+
     }
 
+    /**
+     * @covers \Carminato\GoogleCseBundle\Service\Query\ApiQuery::getParameter
+     */
+    public function testGetParameterAfterAddParameterShouldSuccess()
+    {
+        $query = new ApiQuery();
+        $key = 'test_key';
+        $value = uniqid();
+        $query->addParameter($key, $value);
+
+        $this->assertEquals($value, $query->getParameter($key));
+    }
+
+    /**
+     * @covers \Carminato\GoogleCseBundle\Service\Query\ApiQuery::getParameter
+     */
+    public function testGetParameterWithoutAddParameterShouldReturnNull(){
+        $query = new ApiQuery();
+        $this->assertNull($query->getParameter('test'));
+    }
+
+    /**
+     * @covers \Carminato\GoogleCseBundle\Service\Query\ApiQuery::getParameter
+     * @expectedException \PHPUnit_Framework_Error
+     */
+    public function testGetParameterWithoutParameterShouldFail(){
+        $query = new ApiQuery();
+        $query->getParameter();
+    }
+
+    /**
+     * @covers \Carminato\GoogleCseBundle\Service\Query\ApiQuery::getParameter
+     * @expectedException \InvalidArgumentException
+     */
+    public function testGetParameterInvalidParameterShouldFail(){
+        $query = new ApiQuery();
+        $query->getParameter(null);
+    }
 }
  

@@ -51,7 +51,13 @@ class ApiQuery implements ApiQueryInterface
 
     public function getParameter($key)
     {
-        // TODO: Implement getParameter() method.
+        if (empty($key)) {
+            throw new \InvalidArgumentException('Missing $key parameter');
+        }
+        if (!$this->hasParameter($key)) {
+            return null;
+        }
+        return $this->parameters[$key];
     }
 
     public function getQueryString()
