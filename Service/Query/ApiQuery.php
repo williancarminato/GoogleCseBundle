@@ -16,6 +16,11 @@ class ApiQuery implements ApiQueryInterface
         // TODO: Implement addParameters() method.
     }
 
+    /**
+     * @param string $key
+     * @param string $value
+     * @throws \InvalidArgumentException
+     */
     public function addParameter($key, $value)
     {
         if (empty($key)) {
@@ -30,9 +35,18 @@ class ApiQuery implements ApiQueryInterface
         // TODO: Implement removeParameter() method.
     }
 
+
+    /**
+     * @param $key
+     * @return bool
+     * @throws \InvalidArgumentException
+     */
     public function hasParameter($key)
     {
-        // TODO: Implement hasParameter() method.
+        if (empty($key)) {
+            throw new \InvalidArgumentException('Missing $key parameter');
+        }
+        return array_key_exists($key, $this->parameters);
     }
 
     public function getParameter($key)
