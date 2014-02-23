@@ -70,6 +70,8 @@ class ApiQuery implements ApiQueryInterface
 
     public function getQueryString()
     {
-        // TODO: Implement getQueryString() method.
+        asort($this->parameters);
+
+        return http_build_query($this->parameters);
     }
 }

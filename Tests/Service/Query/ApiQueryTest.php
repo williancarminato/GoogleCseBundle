@@ -278,5 +278,21 @@ class ApiQueryTest extends \PHPUnit_Framework_TestCase
         $query = new ApiQuery();
         $query->addParameters(null);
     }
+
+    public function testGetQueryStringAfterAddParametersShouldSuccess()
+    {
+        $query = new ApiQuery();
+        $parameters = array(
+            'parameter1' => 'value 1',
+            'parameter2' => 'parameter2'
+        );
+
+        $query->addParameters($parameters);
+
+        asort($parameters);
+        $this->assertEquals(
+            http_build_query($parameters), $query->getQueryString()
+        );
+    }
 }
  
