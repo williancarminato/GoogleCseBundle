@@ -19,6 +19,7 @@ class ApiQuery implements ApiQueryInterface
     /**
      * @param string $key
      * @param string $value
+     * @return $this
      * @throws \InvalidArgumentException
      */
     public function addParameter($key, $value)
@@ -28,6 +29,7 @@ class ApiQuery implements ApiQueryInterface
         }
 
         $this->parameters[$key] = $value;
+        return $this;
     }
 
     public function removeParameter($key)

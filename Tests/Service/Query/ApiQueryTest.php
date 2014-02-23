@@ -10,7 +10,7 @@ class ApiQueryTest extends \PHPUnit_Framework_TestCase
      */
     public function testAddParameterWithValidInputShouldSuccess(){
         $query = new ApiQuery();
-
+        $className = get_class($query);
         $reflection = new \ReflectionClass($query);
         $reflectionProperty = $reflection->getProperty('parameters');
         $reflectionProperty->setAccessible(true);
@@ -18,12 +18,14 @@ class ApiQueryTest extends \PHPUnit_Framework_TestCase
         $key = "test_key";
         $value = "Test value";
 
-        $query->addParameter($key, $value);
+        $fluent = $query->addParameter($key, $value);
 
         $propertyValue = $reflectionProperty->getValue($query);
         $this->assertEquals(
             $value, $propertyValue[$key]
         );
+
+        $this->assertInstanceOf($className, $fluent);
     }
 
     /**
