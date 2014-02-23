@@ -4,6 +4,9 @@ namespace Carminato\GoogleCseBundle\Service\Query;
 
 class ApiQuery implements ApiQueryInterface
 {
+    /**
+     * @var array
+     */
     private $parameters;
 
     public function __construct()
@@ -11,6 +14,10 @@ class ApiQuery implements ApiQueryInterface
         $this->parameters = array();
     }
 
+    /**
+     * @param array $parameters
+     * @return $this
+     */
     public function addParameters(array $parameters)
     {
         $this->parameters = array_merge($this->parameters, $parameters);
@@ -34,6 +41,11 @@ class ApiQuery implements ApiQueryInterface
         return $this;
     }
 
+    /**
+     * @param string $key
+     * @return $this
+     * @throws \InvalidArgumentException
+     */
     public function removeParameter($key)
     {
         if (empty($key)) {
@@ -45,7 +57,7 @@ class ApiQuery implements ApiQueryInterface
     }
 
     /**
-     * @param $key
+     * @param string $key
      * @return bool
      * @throws \InvalidArgumentException
      */
@@ -57,6 +69,11 @@ class ApiQuery implements ApiQueryInterface
         return array_key_exists($key, $this->parameters);
     }
 
+    /**
+     * @param string $key
+     * @return mixed
+     * @throws \InvalidArgumentException
+     */
     public function getParameter($key)
     {
         if (empty($key)) {
@@ -68,6 +85,9 @@ class ApiQuery implements ApiQueryInterface
         return $this->parameters[$key];
     }
 
+    /**
+     * @return string
+     */
     public function getQueryString()
     {
         asort($this->parameters);

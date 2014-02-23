@@ -2,7 +2,6 @@
 
 namespace Carminato\GoogleCseBundle\Service\Query;
 
-
 class ApiQueryTest extends \PHPUnit_Framework_TestCase
 {
     /**
@@ -234,6 +233,9 @@ class ApiQueryTest extends \PHPUnit_Framework_TestCase
         );
     }
 
+    /**
+     * @covers \Carminato\GoogleCseBundle\Service\Query\ApiQuery::addParameters
+     */
     public function testAddParametersWithExistentParametersShouldOverridesParameterAndMerge(){
         $query = new ApiQuery();
         $value1 = 'value to override';
@@ -279,6 +281,9 @@ class ApiQueryTest extends \PHPUnit_Framework_TestCase
         $query->addParameters(null);
     }
 
+    /**
+     * @covers \Carminato\GoogleCseBundle\Service\Query\ApiQuery::getQueryString
+     */
     public function testGetQueryStringAfterAddParametersShouldSuccess()
     {
         $query = new ApiQuery();
