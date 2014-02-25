@@ -2,18 +2,13 @@
 
 namespace Carminato\GoogleCseBundle\Service\Query;
 
-class ApiQuery implements ApiQueryInterface
+use Carminato\GoogleCseBundle\Service\Query\Exception\MissingApiKeyException;
+use Carminato\GoogleCseBundle\Service\Query\Exception\MissingCustomSearchEngineIdException;
+use Carminato\GoogleCseBundle\Service\Query\Exception\MissingMandatoryParametersException;
+use Symfony\Component\HttpFoundation\ParameterBag;
+
+class ApiQuery extends ParameterBag implements ApiQueryInterface
 {
-    /**
-     * @var array
-     */
-    private $parameters;
-
-    public function __construct()
-    {
-        $this->parameters = array();
-    }
-
     /**
      * @param array $parameters
      * @return $this
@@ -86,12 +81,76 @@ class ApiQuery implements ApiQueryInterface
     }
 
     /**
+     * @throws Exception\MissingMandatoryParametersException
      * @return string
      */
     public function getQueryString()
     {
+        if (!$this->has('apiKey') || (!$this->has('cx') && !$this->has('cref'))) {
+            throw new MissingMandatoryParametersException();
+        }
+
         asort($this->parameters);
 
         return http_build_query($this->parameters);
+    }
+
+    /**
+     * @return mixed
+     * @throws Exception\MissingApiKeyException
+     */
+    public function getApiKey()
+    {
+        if (!$this->has('apiKey')) {
+            throw new MissingApiKeyException();
+        }
+
+        return $this->get('apiKey');
+    }
+
+    /**
+     * @param $key
+     *
+     * @return $this
+     */
+    public function setApiKey($key)
+    {
+        $this->set('apiKey', $key);
+
+        return $this;
+    }
+
+    /**
+     * @return mixed
+     * @throws Exception\MissingCustomSearchEngineIdException
+     */
+    public function getCustomSearchEngineId()
+    {
+        if (!$this->has('cx') && !$this->has('cref')) {
+            throw new MissingCustomSearchEngineIdException();
+        }
+
+        if ($this->has('cx')) {
+            return $this->get('cx');
+        }
+
+        return $this->get('cref');
+    }
+
+    /**
+     * @param array $cse
+     *
+     * @throws \InvalidArgumentException
+     * @return $this
+     */
+    public function setCustomSearchEngineId(array $cse)
+    {
+        if (!array_key_exists('cx', $cse) && !array_key_exists('cref', $cse)) {
+            throw new \InvalidArgumentException('You must provide cx or cref id');
+        }
+
+        $this->add($cse);
+
+        return $this;
     }
 }
