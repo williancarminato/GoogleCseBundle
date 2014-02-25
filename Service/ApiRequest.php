@@ -39,6 +39,16 @@ class ApiRequest implements ApiRequestInterface
 
     public function getResponse()
     {
-        // TODO: Implement getResponse() method.
+        $url = $this->getUrl();
+        $query = $this->query->getQueryString();
+
+        $url = $url . '?' . $query;
+
+        $ch = curl_init();
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+        curl_setopt($ch, CURLOPT_URL, $url);
+        $result = curl_exec($ch);
+
+        return json_decode($result, true);
     }
 }

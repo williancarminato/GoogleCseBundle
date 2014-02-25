@@ -86,7 +86,7 @@ class ApiQuery extends ParameterBag implements ApiQueryInterface
      */
     public function getQueryString()
     {
-        if (!$this->has('apiKey') || (!$this->has('cx') && !$this->has('cref'))) {
+        if (!$this->has('key') || (!$this->has('cx') && !$this->has('cref'))) {
             throw new MissingMandatoryParametersException();
         }
 
@@ -101,11 +101,11 @@ class ApiQuery extends ParameterBag implements ApiQueryInterface
      */
     public function getApiKey()
     {
-        if (!$this->has('apiKey')) {
+        if (!$this->has('key')) {
             throw new MissingApiKeyException();
         }
 
-        return $this->get('apiKey');
+        return $this->get('key');
     }
 
     /**
@@ -115,7 +115,7 @@ class ApiQuery extends ParameterBag implements ApiQueryInterface
      */
     public function setApiKey($key)
     {
-        $this->set('apiKey', $key);
+        $this->set('key', $key);
 
         return $this;
     }

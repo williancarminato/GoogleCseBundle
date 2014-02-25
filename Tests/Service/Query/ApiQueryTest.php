@@ -296,7 +296,7 @@ class ApiQueryTest extends \PHPUnit_Framework_TestCase
         $query = new ApiQuery();
 
         $apiKey = 'Custom Search ApiKey';
-        $query->set('apiKey', $apiKey);
+        $query->set('key', $apiKey);
 
         $this->assertEquals($apiKey, $query->getApiKey());
     }
@@ -379,7 +379,7 @@ class ApiQueryTest extends \PHPUnit_Framework_TestCase
 
         $parameters = array(
             'cx' => 'Custom Search Key Cx Id',
-            'apiKey' => 'Custom Search ApiKey'
+            'key' => 'Custom Search ApiKey'
         );
         $query->addParameters($parameters);
 
