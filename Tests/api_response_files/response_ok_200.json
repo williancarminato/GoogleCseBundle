@@ -1,0 +1,394 @@
+
+{
+    "kind": "customsearch#search",
+    "url": {
+        "type": "application/json",
+        "template": "https://www.googleapis.com/customsearch/v1?q={searchTerms}&num={count?}&start={startIndex?}&lr={language?}&safe={safe?}&cx={cx?}&cref={cref?}&sort={sort?}&filter={filter?}&gl={gl?}&cr={cr?}&googlehost={googleHost?}&c2coff={disableCnTwTranslation?}&hq={hq?}&hl={hl?}&siteSearch={siteSearch?}&siteSearchFilter={siteSearchFilter?}&exactTerms={exactTerms?}&excludeTerms={excludeTerms?}&linkSite={linkSite?}&orTerms={orTerms?}&relatedSite={relatedSite?}&dateRestrict={dateRestrict?}&lowRange={lowRange?}&highRange={highRange?}&searchType={searchType}&fileType={fileType?}&rights={rights?}&imgSize={imgSize?}&imgType={imgType?}&imgColorType={imgColorType?}&imgDominantColor={imgDominantColor?}&alt=json"
+    },
+    "queries": {
+        "nextPage": [
+            {
+                "title": "Google Custom Search - cars",
+                "totalResults": "59400",
+                "searchTerms": "cars",
+                "count": 10,
+                "startIndex": 11,
+                "inputEncoding": "utf8",
+                "outputEncoding": "utf8",
+                "safe": "off",
+                "cx": "018070137926188148298:dio1sd4mq18"
+            }
+        ],
+        "request": [
+            {
+                "title": "Google Custom Search - cars",
+                "totalResults": "59400",
+                "searchTerms": "cars",
+                "count": 10,
+                "startIndex": 1,
+                "inputEncoding": "utf8",
+                "outputEncoding": "utf8",
+                "safe": "off",
+                "cx": "018070137926188148298:dio1sd4mq18"
+            }
+        ]
+    },
+    "context": {
+        "title": "buzzfeed test"
+    },
+    "searchInformation": {
+        "searchTime": 0.493564,
+        "formattedSearchTime": "0,49",
+        "totalResults": "59400",
+        "formattedTotalResults": "59.400"
+    },
+    "items": [
+        {
+            "kind": "customsearch#result",
+            "title": "BuzzFeed: cars Buzz",
+            "htmlTitle": "BuzzFeed: \u003cb\u003ecars\u003c/b\u003e Buzz",
+            "link": "http://www.buzzfeed.com/tag/cars",
+            "displayLink": "www.buzzfeed.com",
+            "snippet": "cars Buzz on BuzzFeed. BuzzFeed is the best place to post, find, and share the \nbest content on the web.",
+            "htmlSnippet": "\u003cb\u003ecars\u003c/b\u003e Buzz on BuzzFeed. BuzzFeed is the best place to post, find, and share the \u003cbr\u003e\nbest content on the web.",
+            "cacheId": "qQq4xj-R4roJ",
+            "formattedUrl": "www.buzzfeed.com/tag/cars",
+            "htmlFormattedUrl": "www.buzzfeed.com/tag/\u003cb\u003ecars\u003c/b\u003e",
+            "pagemap": {
+                "metatags": [
+                    {
+                        "copyright": "Copyright 2014 BuzzFeed, Inc. All rights reserved.",
+                        "fb:app_id": "45075597673",
+                        "og:site_name": "BuzzFeed",
+                        "fb:admins": "707356852"
+                    }
+                ]
+            }
+        },
+        {
+            "kind": "customsearch#result",
+            "title": "Cash For Junk Cars Atlanta 770-899-0178",
+            "htmlTitle": "Cash For Junk \u003cb\u003eCars\u003c/b\u003e Atlanta 770-899-0178",
+            "link": "http://www.buzzfeed.com/junkcarking/cash-for-junk-cars-atlanta-jwoo",
+            "displayLink": "www.buzzfeed.com",
+            "snippet": "Feb 4, 2014 ... We give you Cash For Junk Cars Atlanta, we offer in the range of $200-$5000 for \nyour car on the spot! You might wonder if we can offer...",
+            "htmlSnippet": "Feb 4, 2014 \u003cb\u003e...\u003c/b\u003e We give you Cash For Junk \u003cb\u003eCars\u003c/b\u003e Atlanta, we offer in the range of $200-$5000 for \u003cbr\u003e\nyour \u003cb\u003ecar\u003c/b\u003e on the spot! You might wonder if we can offer...",
+            "cacheId": "kxPsF2eqA0kJ",
+            "formattedUrl": "www.buzzfeed.com/junkcarking/cash-for-junk-cars-atlanta-jwoo",
+            "htmlFormattedUrl": "www.buzzfeed.com/junk\u003cb\u003ecar\u003c/b\u003eking/cash-for-junk-\u003cb\u003ecars\u003c/b\u003e-atlanta-jwoo",
+            "pagemap": {
+                "metatags": [
+                    {
+                        "copyright": "Copyright 2014 BuzzFeed, Inc. All rights reserved.",
+                        "bf:buzzid": "2976356",
+                        "bf:userid": "1196988",
+                        "author": "junkcarking",
+                        "apple-itunes-app": "app-id=352969997, affiliate-data=at=10l3HP&ct=Buzz/SmartBanner, app-argument=buzz:///junkcarking/cash-for-junk-cars-atlanta-jwoo",
+                        "fb:app_id": "45075597673",
+                        "og:site_name": "BuzzFeed Community",
+                        "fb:admins": "707356852",
+                        "title": "Community Post: Cash For Junk Cars Atlanta    770-899-0178",
+                        "og:title": "Community Post: Cash For Junk Cars Atlanta    770-899-0178",
+                        "og:description": "We give you Cash For Junk Cars Atlanta, we offer in the range of $200-$5,000 for your car on the spot! You might wonder if we can offer cash for junk cars in Atlanta Ga. Cash for Junk Cars Atlanta ..."
+                    }
+                ]
+            }
+        },
+        {
+            "kind": "customsearch#result",
+            "title": "15 Eerie Pictures Of A Classic Car Graveyard In Sweden",
+            "htmlTitle": "15 Eerie Pictures Of A Classic \u003cb\u003eCar\u003c/b\u003e Graveyard In Sweden",
+            "link": "http://www.buzzfeed.com/lukelewis/eerily-beautiful-pictures-of-a-classic-car-graveyard-in-s",
+            "displayLink": "www.buzzfeed.com",
+            "snippet": "Feb 4, 2014 ... “The cars are now a part of nature in a way. The trees grow all over and through \nthe cars, with branches sneaking through windows and over ...",
+            "htmlSnippet": "Feb 4, 2014 \u003cb\u003e...\u003c/b\u003e “The \u003cb\u003ecars\u003c/b\u003e are now a part of nature in a way. The trees grow all over and through \u003cbr\u003e\nthe \u003cb\u003ecars\u003c/b\u003e, with branches sneaking through windows and over&nbsp;\u003cb\u003e...\u003c/b\u003e",
+            "cacheId": "LyyvBYLmq9oJ",
+            "formattedUrl": "www.buzzfeed.com/.../eerily-beautiful-pictures-of-a-classic-car-graveyard-in- s",
+            "htmlFormattedUrl": "www.buzzfeed.com/.../eerily-beautiful-pictures-of-a-classic-\u003cb\u003ecar\u003c/b\u003e-graveyard-in- s",
+            "pagemap": {
+                "metatags": [
+                    {
+                        "copyright": "Copyright 2014 BuzzFeed, Inc. All rights reserved.",
+                        "bf:buzzid": "2973951",
+                        "bf:userid": "422680",
+                        "author": "Luke Lewis",
+                        "news_keywords": "photography, classic cars, sweden",
+                        "sailthru.tags": "photography, classic cars, sweden",
+                        "apple-itunes-app": "app-id=352969997, affiliate-data=at=10l3HP&ct=Buzz/SmartBanner, app-argument=buzz:///lukelewis/eerily-beautiful-pictures-of-a-classic-car-graveyard-in-s",
+                        "pinterest-rich-pin": "false",
+                        "fb:app_id": "45075597673",
+                        "og:site_name": "BuzzFeed",
+                        "fb:admins": "707356852"
+                    }
+                ]
+            }
+        },
+        {
+            "kind": "customsearch#result",
+            "title": "A London Skyscraper Is Melting Cars With A Solar-Powered Death ...",
+            "htmlTitle": "A London Skyscraper Is Melting \u003cb\u003eCars\u003c/b\u003e With A Solar-Powered Death \u003cb\u003e...\u003c/b\u003e",
+            "link": "http://www.buzzfeed.com/tomphillips/a-london-skyscraper-is-melting-cars-with-a-solar-powered-dea",
+            "displayLink": "www.buzzfeed.com",
+            "snippet": "Sep 2, 2013 ... The \"Walkie-Talkie\" skyscraper has been accused of partially melting a Jaguar \nthat was parked in the wrong place. The buildings are...",
+            "htmlSnippet": "Sep 2, 2013 \u003cb\u003e...\u003c/b\u003e The &quot;Walkie-Talkie&quot; skyscraper has been accused of partially melting a Jaguar \u003cbr\u003e\nthat was parked in the wrong place. The buildings are...",
+            "cacheId": "JqkQnUA0eNkJ",
+            "formattedUrl": "www.buzzfeed.com/.../a-london-skyscraper-is-melting-cars-with-a-solar- powered-dea",
+            "htmlFormattedUrl": "www.buzzfeed.com/.../a-london-skyscraper-is-melting-\u003cb\u003ecars\u003c/b\u003e-with-a-solar- powered-dea",
+            "pagemap": {
+                "metatags": [
+                    {
+                        "copyright": "Copyright 2014 BuzzFeed, Inc. All rights reserved.",
+                        "bf:buzzid": "2577943",
+                        "bf:userid": "4146",
+                        "author": "Tom Phillips",
+                        "news_keywords": "skyscraper, cars, melting, sunlight",
+                        "sailthru.tags": "skyscraper, cars, melting, sunlight",
+                        "apple-itunes-app": "app-id=352969997, affiliate-data=at=10l3HP&ct=Buzz/SmartBanner, app-argument=buzz:///tomphillips/a-london-skyscraper-is-melting-cars-with-a-solar-powered-dea",
+                        "fb:app_id": "45075597673",
+                        "og:site_name": "BuzzFeed",
+                        "fb:admins": "707356852",
+                        "title": "A London Skyscraper Is Melting Cars With A Solar-Powered Death Ray"
+                    }
+                ],
+                "hcard": [
+                    {
+                        "fn": "Tara Mulholland",
+                        "nickname": "@tara_mulholland",
+                        "url": "https://twitter.com/tara_mulholland",
+                        "url_text": "Tara Mulholland @tara_mulholland",
+                        "photo": "http://a0.twimg.com/profile_images/1179940513/tara_normal.jpg"
+                    },
+                    {
+                        "fn": "Jim Waterson",
+                        "nickname": "@jimwaterson",
+                        "url": "https://twitter.com/jimwaterson",
+                        "url_text": "Jim Waterson @jimwaterson",
+                        "photo": "http://a0.twimg.com/profile_images/3256278586/1d06d3ba89d960ab658c8e6cdcb82e1a_normal.png"
+                    }
+                ]
+            }
+        },
+        {
+            "kind": "customsearch#result",
+            "title": "Tina Fey Joined Jerry Seinfeld For \"Comedians In Cars Getting Coffee\"",
+            "htmlTitle": "Tina Fey Joined Jerry Seinfeld For &quot;Comedians In \u003cb\u003eCars\u003c/b\u003e Getting Coffee&quot;",
+            "link": "http://www.buzzfeed.com/lyapalater/tina-fey-joined-jerry-seinfeld-for-comedians-in-cars-getting",
+            "displayLink": "www.buzzfeed.com",
+            "snippet": "Jan 30, 2014 ... Well, this is an enjoyable 17 minutes and 13 seconds. ..",
+            "htmlSnippet": "Jan 30, 2014 \u003cb\u003e...\u003c/b\u003e Well, this is an enjoyable 17 minutes and 13 seconds. ..",
+            "cacheId": "XGYzUbYqSH4J",
+            "formattedUrl": "www.buzzfeed.com/.../tina-fey-joined-jerry-seinfeld-for-comedians-in-cars- getting",
+            "htmlFormattedUrl": "www.buzzfeed.com/.../tina-fey-joined-jerry-seinfeld-for-comedians-in-\u003cb\u003ecars\u003c/b\u003e- getting",
+            "pagemap": {
+                "metatags": [
+                    {
+                        "copyright": "Copyright 2014 BuzzFeed, Inc. All rights reserved.",
+                        "bf:buzzid": "2959086",
+                        "bf:userid": "262092",
+                        "author": "Lauren Yapalater",
+                        "news_keywords": "Tina Fey and Jerry Seinfeld, comedians in cars getting coffee",
+                        "sailthru.tags": "Tina Fey and Jerry Seinfeld, comedians in cars getting coffee",
+                        "apple-itunes-app": "app-id=352969997, affiliate-data=at=10l3HP&ct=Buzz/SmartBanner, app-argument=buzz:///lyapalater/tina-fey-joined-jerry-seinfeld-for-comedians-in-cars-getting",
+                        "fb:app_id": "45075597673",
+                        "og:site_name": "BuzzFeed",
+                        "fb:admins": "707356852",
+                        "title": "Tina Fey Joined Jerry Seinfeld For \"Comedians In Cars Getting Coffee\""
+                    }
+                ]
+            }
+        },
+        {
+            "kind": "customsearch#result",
+            "title": "How Ford Is Using FOMO To Sell Cars",
+            "htmlTitle": "How Ford Is Using FOMO To Sell \u003cb\u003eCars\u003c/b\u003e",
+            "link": "http://www.buzzfeed.com/sapna/how-ford-is-using-fomo-to-sell-cars",
+            "displayLink": "www.buzzfeed.com",
+            "snippet": "Dec 16, 2013 ... That's not a huge surprise, given the auto industry's fight for millennials, who are \nless enamored with cars than the baby boomer generation.",
+            "htmlSnippet": "Dec 16, 2013 \u003cb\u003e...\u003c/b\u003e That&#39;s not a huge surprise, given the auto industry&#39;s fight for millennials, who are \u003cbr\u003e\nless enamored with \u003cb\u003ecars\u003c/b\u003e than the baby boomer generation.",
+            "cacheId": "AKkIvWcfHjYJ",
+            "formattedUrl": "www.buzzfeed.com/sapna/how-ford-is-using-fomo-to-sell-cars",
+            "htmlFormattedUrl": "www.buzzfeed.com/sapna/how-ford-is-using-fomo-to-sell-\u003cb\u003ecars\u003c/b\u003e",
+            "pagemap": {
+                "metatags": [
+                    {
+                        "copyright": "Copyright 2014 BuzzFeed, Inc. All rights reserved.",
+                        "bf:buzzid": "2831373",
+                        "bf:userid": "683073",
+                        "author": "Sapna Maheshwari",
+                        "news_keywords": "Ford, business, cars and millennials, fomo, ford motor co, futurists, jomo, millennials, sheryl connelly",
+                        "sailthru.tags": "Ford, business, cars and millennials, fomo, ford motor co, futurists, jomo, millennials, sheryl connelly",
+                        "apple-itunes-app": "app-id=352969997, affiliate-data=at=10l3HP&ct=Buzz/SmartBanner, app-argument=buzz:///sapna/how-ford-is-using-fomo-to-sell-cars",
+                        "fb:app_id": "45075597673",
+                        "og:site_name": "BuzzFeed",
+                        "fb:admins": "707356852",
+                        "title": "How Ford Is Using FOMO To Sell Cars"
+                    }
+                ]
+            }
+        },
+        {
+            "kind": "customsearch#result",
+            "title": "What If You Bought Tesla Stock Instead Of One Of Its Cars",
+            "htmlTitle": "What If You Bought Tesla Stock Instead Of One Of Its \u003cb\u003eCars\u003c/b\u003e",
+            "link": "http://www.buzzfeed.com/charliewarzel/what-if-you-bought-tesla-stock-instead-of-one-of-its-cars",
+            "displayLink": "www.buzzfeed.com",
+            "snippet": "Sep 20, 2013 ... The year is 2010 and let's pretend for a moment that you've got some extra \nmoney to throw around. Let's say you're a car person and also a bit ...",
+            "htmlSnippet": "Sep 20, 2013 \u003cb\u003e...\u003c/b\u003e The year is 2010 and let&#39;s pretend for a moment that you&#39;ve got some extra \u003cbr\u003e\nmoney to throw around. Let&#39;s say you&#39;re a \u003cb\u003ecar\u003c/b\u003e person and also a bit&nbsp;\u003cb\u003e...\u003c/b\u003e",
+            "cacheId": "P7IfndDleswJ",
+            "formattedUrl": "www.buzzfeed.com/.../what-if-you-bought-tesla-stock-instead-of-one-of-its- cars",
+            "htmlFormattedUrl": "www.buzzfeed.com/.../what-if-you-bought-tesla-stock-instead-of-one-of-its- \u003cb\u003ecars\u003c/b\u003e",
+            "pagemap": {
+                "cse_image": [
+                    {
+                        "src": "http://s3-ak.buzzfeed.com/static/2013-11/campaign_images/webdr06/27/14/6-almost-immortal-animals-1-16122-1385582385-50.jpg"
+                    }
+                ],
+                "cse_thumbnail": [
+                    {
+                        "width": "100",
+                        "height": "66",
+                        "src": "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcSIAgi479NjL5BbCmoB6fi2iHG4gpY5WK_sswBpfOOUKYJC2lPOeYGr"
+                    }
+                ],
+                "metatags": [
+                    {
+                        "copyright": "Copyright 2014 BuzzFeed, Inc. All rights reserved.",
+                        "bf:buzzid": "2619161",
+                        "bf:userid": "260121",
+                        "author": "Charlie Warzel",
+                        "apple-itunes-app": "app-id=352969997, affiliate-data=at=10l3HP&ct=Buzz/SmartBanner, app-argument=buzz:///charliewarzel/what-if-you-bought-tesla-stock-instead-of-one-of-its-cars",
+                        "fb:app_id": "45075597673",
+                        "og:site_name": "BuzzFeed",
+                        "fb:admins": "707356852",
+                        "title": "What If You Bought Tesla Stock Instead Of One Of Its Cars?",
+                        "og:title": "What If You Bought Tesla Stock Instead Of One Of Its Cars?",
+                        "og:description": "Spoiler: You'd have made some serious cash."
+                    }
+                ]
+            }
+        },
+        {
+            "kind": "customsearch#result",
+            "title": "Someone On Vine Is Accosting People In Fancy Cars And It's Hilarious",
+            "htmlTitle": "Someone On Vine Is Accosting People In Fancy \u003cb\u003eCars\u003c/b\u003e And It&#39;s Hilarious",
+            "link": "http://www.buzzfeed.com/alexnaidus/someone-on-vine-is-accosting-people-in-fancy-cars-and-it-is",
+            "displayLink": "www.buzzfeed.com",
+            "snippet": "Sep 20, 2013 ... Vine user Conner O'Malley has a series documenting his interactions with people \n(mostly older men) driving expensive cars.",
+            "htmlSnippet": "Sep 20, 2013 \u003cb\u003e...\u003c/b\u003e Vine user Conner O&#39;Malley has a series documenting his interactions with people \u003cbr\u003e\n(mostly older men) driving expensive \u003cb\u003ecars\u003c/b\u003e.",
+            "cacheId": "8HiSN6RzWuYJ",
+            "formattedUrl": "www.buzzfeed.com/.../someone-on-vine-is-accosting-people-in-fancy-cars- and-it-is",
+            "htmlFormattedUrl": "www.buzzfeed.com/.../someone-on-vine-is-accosting-people-in-fancy-\u003cb\u003ecars\u003c/b\u003e- and-it-is",
+            "pagemap": {
+                "cse_image": [
+                    {
+                        "src": "https://v.cdn.vine.co/r/thumbs/B4F3F9D8BB975332043057668096_197a51a63b5.3.1.mp4_fqtnFXwqk9.0yTNJUPLpT8lBJVuWcIHdE00diMyO0LkctzpY_ZSIOOx1tAIUrYBg.jpg?versionId=49F2AYaY2aRhY3hdrvC59Xm4Sk.jBjni"
+                    }
+                ],
+                "cse_thumbnail": [
+                    {
+                        "width": "225",
+                        "height": "225",
+                        "src": "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQhHKQmL1ODA8ZVSkqT_A77a2sfbP2YQBT3d9RraEW5efa1rGdk3tKhWvg"
+                    }
+                ],
+                "metatags": [
+                    {
+                        "copyright": "Copyright 2014 BuzzFeed, Inc. All rights reserved.",
+                        "bf:buzzid": "2619137",
+                        "bf:userid": "736796",
+                        "author": "Alex Naidus",
+                        "news_keywords": "vine, cars, conner omalley, satire",
+                        "sailthru.tags": "vine, cars, conner omalley, satire",
+                        "apple-itunes-app": "app-id=352969997, affiliate-data=at=10l3HP&ct=Buzz/SmartBanner, app-argument=buzz:///alexnaidus/someone-on-vine-is-accosting-people-in-fancy-cars-and-it-is",
+                        "fb:app_id": "45075597673",
+                        "og:site_name": "BuzzFeed",
+                        "fb:admins": "707356852",
+                        "title": "Someone On Vine Is Accosting People In Fancy Cars And It's Hilarious"
+                    }
+                ]
+            }
+        },
+        {
+            "kind": "customsearch#result",
+            "title": "Watch the hilarious trailer for the new star-studded season of jerry",
+            "htmlTitle": "Watch the hilarious trailer for the new star-studded season of jerry",
+            "link": "http://www.buzzfeed.com/peterlauria/jerry-seinfeld-comedians-in-cars-getting-coffee-trailer-seas",
+            "displayLink": "www.buzzfeed.com",
+            "snippet": "Dec 23, 2013 ... The Season 3 trailer for Comedians in Cars Getting Coffee , exclusively on \nBuzzFeed, sees Seinfeld discuss cunnilingus with Howard Stern...",
+            "htmlSnippet": "Dec 23, 2013 \u003cb\u003e...\u003c/b\u003e The Season 3 trailer for Comedians in \u003cb\u003eCars\u003c/b\u003e Getting Coffee , exclusively on \u003cbr\u003e\nBuzzFeed, sees Seinfeld discuss cunnilingus with Howard Stern...",
+            "cacheId": "QdaksxjXfFQJ",
+            "formattedUrl": "www.buzzfeed.com/.../jerry-seinfeld-comedians-in-cars-getting-coffee-trailer -seas",
+            "htmlFormattedUrl": "www.buzzfeed.com/.../jerry-seinfeld-comedians-in-\u003cb\u003ecars\u003c/b\u003e-getting-coffee-trailer -seas",
+            "pagemap": {
+                "cse_image": [
+                    {
+                        "src": "http://s3-ak.buzzfed.com/static/2013-12/campaign_images/webdr05/23/15/watch-the-hilarious-trailer-for-the-new-star-stud-1-20615-1387829949-7.jpg"
+                    }
+                ],
+                "cse_thumbnail": [
+                    {
+                        "width": "100",
+                        "height": "66",
+                        "src": "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcTO-iVQ6yoPAj2mbh2M4kHKwbkJtQuRrHhkL7yUR1uFWWYHUToQKeBFug"
+                    }
+                ],
+                "metatags": [
+                    {
+                        "copyright": "Copyright 2014 BuzzFeed, Inc. All rights reserved.",
+                        "bf:buzzid": "2843937",
+                        "bf:userid": "681206",
+                        "author": "Peter Lauria",
+                        "news_keywords": "Louis CK, comedian in cars getting coffee, delorean, fiat jolly, howard stern, jay leno, mgb roadster, patton oswalt, pontiac gto, porsche",
+                        "sailthru.tags": "Louis CK, comedian in cars getting coffee, delorean, fiat jolly, howard stern, jay leno, mgb roadster, patton oswalt, pontiac gto, porsche",
+                        "apple-itunes-app": "app-id=352969997, affiliate-data=at=10l3HP&ct=Buzz/SmartBanner, app-argument=buzz:///peterlauria/jerry-seinfeld-comedians-in-cars-getting-coffee-trailer-seas",
+                        "fb:app_id": "45075597673",
+                        "og:site_name": "BuzzFeed",
+                        "fb:admins": "707356852",
+                        "title": "Watch The Hilarious Trailer For The New Star-Studded Season Of Jerry Seinfeld's Web Series"
+                    }
+                ]
+            }
+        },
+        {
+            "kind": "customsearch#result",
+            "title": "What If All The Cars In GTA V Were Possessed By Evil Demons",
+            "htmlTitle": "What If All The \u003cb\u003eCars\u003c/b\u003e In GTA V Were Possessed By Evil Demons",
+            "link": "http://www.buzzfeed.com/josephbernstein/what-if-all-the-cars-in-gta-v-were-possessed-by-evil-demons",
+            "displayLink": "www.buzzfeed.com",
+            "snippet": "4 days ago ... Youtube user “taltigolt” hacked GTA V so that all of the cars are out of ... A \nnarrative suggests itself: The cars of Los Santos, furious at being ...",
+            "htmlSnippet": "4 days ago \u003cb\u003e...\u003c/b\u003e Youtube user “taltigolt” hacked GTA V so that all of the \u003cb\u003ecars\u003c/b\u003e are out of \u003cb\u003e...\u003c/b\u003e A \u003cbr\u003e\nnarrative suggests itself: The \u003cb\u003ecars\u003c/b\u003e of Los Santos, furious at being&nbsp;\u003cb\u003e...\u003c/b\u003e",
+            "cacheId": "CvPTRz9v1moJ",
+            "formattedUrl": "www.buzzfeed.com/.../what-if-all-the-cars-in-gta-v-were-possessed-by-evil- demons",
+            "htmlFormattedUrl": "www.buzzfeed.com/.../what-if-all-the-\u003cb\u003ecars\u003c/b\u003e-in-gta-v-were-possessed-by-evil- demons",
+            "pagemap": {
+                "cse_image": [
+                    {
+                        "src": "http://s3-ak.buzzfeed.com/static/2014-02/campaign_images/webdr07/20/1/why-facebook-had-to-have-whatsapp-1-28926-1392877564-0.jpg"
+                    }
+                ],
+                "cse_thumbnail": [
+                    {
+                        "width": "100",
+                        "height": "66",
+                        "src": "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcScRe70RSAe_SYjYE-73xrYOkQEHUMTexe8hk7_i-pkjNSmCrS4ftxM"
+                    }
+                ],
+                "metatags": [
+                    {
+                        "copyright": "Copyright 2014 BuzzFeed, Inc. All rights reserved.",
+                        "bf:buzzid": "3021435",
+                        "bf:userid": "422588",
+                        "author": "Joseph Bernstein",
+                        "apple-itunes-app": "app-id=352969997, affiliate-data=at=10l3HP&ct=Buzz/SmartBanner, app-argument=buzz:///josephbernstein/what-if-all-the-cars-in-gta-v-were-possessed-by-evil-demons",
+                        "fb:app_id": "45075597673",
+                        "og:site_name": "BuzzFeed",
+                        "fb:admins": "707356852",
+                        "title": "What If All The Cars In GTA V Were Possessed By Evil Demons?",
+                        "og:title": "What If All The Cars In GTA V Were Possessed By Evil Demons?",
+                        "og:description": "Rockstar's blockbuster action game turns into a harrowing survival horror epic ."
+                    }
+                ]
+            }
+        }
+    ]
+}

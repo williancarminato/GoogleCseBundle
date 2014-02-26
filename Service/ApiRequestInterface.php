@@ -12,5 +12,5 @@ interface ApiRequestInterface
 
     public function setQuery(ApiQueryInterface $query);
 
-    public function getResponse();
+    public function getResponse($format = 'json');
 }

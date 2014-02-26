@@ -2,7 +2,9 @@
 
 namespace Carminato\GoogleCseBundle\Service;
 
+use Carminato\GoogleCseBundle\Service\Parser\JsonCseResponseParser;
 use Carminato\GoogleCseBundle\Service\Query\ApiQueryInterface;
+use Carminato\GoogleCseBundle\Service\Query\Exception\MissingApiQueryException;
 
 class ApiRequest implements ApiRequestInterface
 {
@@ -32,15 +34,30 @@ class ApiRequest implements ApiRequestInterface
         return $this;
     }
 
+    public function getQuery()
+    {
+        if (empty($this->query)) {
+            throw new MissingApiQueryException();
+        }
+
+        return $this->query;
+    }
+
     public function setQuery(ApiQueryInterface $query)
     {
         $this->query = $query;
     }
 
-    public function getResponse()
+    /**
+     * @param string $format
+     *
+     * @return ApiResponse
+     * @throws \InvalidArgumentException
+     */
+    public function getResponse($format = 'json')
     {
         $url = $this->getUrl();
-        $query = $this->query->getQueryString();
+        $query = $this->getQuery()->getQueryString();
 
         $url = $url . '?' . $query;
 
@@ -49,6 +66,12 @@ class ApiRequest implements ApiRequestInterface
         curl_setopt($ch, CURLOPT_URL, $url);
         $result = curl_exec($ch);
 
-        return json_decode($result, true);
+        switch ($format) {
+            case 'json':
+                return new ApiResponse($result, new JsonCseResponseParser());
+                break;
+            default:
+                throw new \InvalidArgumentException('Supported formats are json and atom');
+        }
     }
 }

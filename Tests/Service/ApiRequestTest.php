@@ -2,8 +2,6 @@
 
 namespace Carminato\GoogleCseBundle\Service;
 
-use Carminato\GoogleCseBundle\Service\Query\ApiQuery;
-
 class ApiRequestTest extends \PHPUnit_Framework_TestCase
 {
     /**
@@ -11,7 +9,7 @@ class ApiRequestTest extends \PHPUnit_Framework_TestCase
      */
     public function testGetUrlWithNullMustFail()
     {
-        $apiRequest = new ApiRequest(null, null);
+        $apiRequest = new ApiRequest();
 
         $apiRequest->getUrl();
     }
@@ -20,8 +18,20 @@ class ApiRequestTest extends \PHPUnit_Framework_TestCase
     {
         $cse_url = "https://www.googleapis.com/customsearch/v1";
 
-        $apiRequest = new ApiRequest($cse_url, null);
+        $apiRequest = new ApiRequest($cse_url);
 
         $this->assertEquals($cse_url, $apiRequest->getUrl());
+    }
+
+    /**
+     * @expectedException \Carminato\GoogleCseBundle\Service\Query\Exception\MissingApiQueryException
+     */
+    public function testGetResponseWithoutQueryMustFail()
+    {
+        $cse_url = "https://www.googleapis.com/customsearch/v1";
+
+        $apiRequest = new ApiRequest($cse_url);
+
+        $apiRequest->getResponse();
     }
 }
