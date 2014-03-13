@@ -2,6 +2,7 @@
 
 namespace Carminato\GoogleCseBundle\Service;
 
+use Carminato\GoogleCseBundle\Model\CseApiResultQueriesBag;
 use Carminato\GoogleCseBundle\Service\Parser\CseResponseParserInterface;
 
 class ApiResponse implements ApiResponseInterface
@@ -39,8 +40,11 @@ class ApiResponse implements ApiResponseInterface
         // TODO: Implement getRaw() method.
     }
 
+    /**
+     * @return CseApiResultQueriesBag
+     */
     public function getQueries()
     {
-        // TODO: Implement getQueries() method.
+        return $this->parser->parseQueries($this->content);
     }
 }

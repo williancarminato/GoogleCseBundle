@@ -2,7 +2,7 @@
 
 namespace Carminato\GoogleCseBundle\Model;
 
-class CseApiResultItem
+class CseApiResultItem implements CseApiResultInterface
 {
     private $kind;
 

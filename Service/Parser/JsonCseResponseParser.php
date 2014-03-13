@@ -2,7 +2,11 @@
 
 namespace Carminato\GoogleCseBundle\Service\Parser;
 
+use Carminato\GoogleCseBundle\Model\CseApiResultInterface;
 use Carminato\GoogleCseBundle\Model\CseApiResultItem;
+use Carminato\GoogleCseBundle\Model\CseApiResultQueriesBag;
+use Carminato\GoogleCseBundle\Model\CseApiResultQuery;
+use Carminato\GoogleCseBundle\Model\CseApiResultQueryItem;
 
 class JsonCseResponseParser implements CseResponseParserInterface
 {
@@ -18,7 +22,10 @@ class JsonCseResponseParser implements CseResponseParserInterface
         $items = null;
         if (isset($decodedContent['items'])) {
             foreach ($decodedContent['items'] as $arrayItemProperties) {
-                $item = $this->generateCseResultApiItem($arrayItemProperties);
+                $item = $this->generateCseApiResult(
+                    $arrayItemProperties,
+                    new CseApiResultItem()
+                );
 
                 $items[] = $item;
             }
@@ -28,13 +35,14 @@ class JsonCseResponseParser implements CseResponseParserInterface
     }
 
     /**
-     * @param array $itemProperties
+     * @param array                                         $itemProperties
+     * @param \Carminato\GoogleCseBundle\Model\CseApiResultInterface $cseApiResultClass
      *
-     * @return CseApiResultItem
+     * @return CseApiResultInterface
      */
-    private function generateCseResultApiItem(array $itemProperties)
+    private function generateCseApiResult(array $itemProperties, CseApiResultInterface $cseApiResultClass)
     {
-        $item = new CseApiResultItem();
+        $item = clone $cseApiResultClass;
 
         foreach ($itemProperties as $property => $value) {
             $setPropertyMethod = 'set'. ucfirst($property);
@@ -45,5 +53,29 @@ class JsonCseResponseParser implements CseResponseParserInterface
         }
 
         return $item;
+    }
+
+    /**
+     * @param $content
+     *
+     * @return CseApiResultQueriesBag
+     */
+    public function parseQueries($content)
+    {
+        $decodedContent = json_decode($content, true);
+
+        $queries = new CseApiResultQueriesBag();
+        if (isset($decodedContent['queries'])) {
+            foreach ($decodedContent['queries'] as $queryName => $arrayQueryProperties) {
+                $query = $this->generateCseApiResult(
+                    $arrayQueryProperties,
+                    new CseApiResultQueryItem()
+                );
+
+                $queries->set($queryName, $query);
+            }
+        }
+
+        return $queries;
     }
 }
