@@ -68,7 +68,7 @@ class JsonCseResponseParser implements CseResponseParserInterface
         if (isset($decodedContent['queries'])) {
             foreach ($decodedContent['queries'] as $queryName => $arrayQueryProperties) {
                 $query = $this->generateCseApiResult(
-                    $arrayQueryProperties,
+                    $arrayQueryProperties[0],
                     new CseApiResultQueryItem()
                 );
 
