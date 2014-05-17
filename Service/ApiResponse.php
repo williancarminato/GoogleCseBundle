@@ -47,4 +47,9 @@ class ApiResponse implements ApiResponseInterface
     {
         return $this->parser->parseQueries($this->content);
     }
+
+    public function getErrors()
+    {
+        return $this->parser->parseError($this->content);
+    }
 }

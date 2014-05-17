@@ -7,6 +7,7 @@ use Carminato\GoogleCseBundle\Model\CseApiResultItem;
 use Carminato\GoogleCseBundle\Model\CseApiResultQueriesBag;
 use Carminato\GoogleCseBundle\Model\CseApiResultQuery;
 use Carminato\GoogleCseBundle\Model\CseApiResultQueryItem;
+use Carminato\GoogleCseBundle\Service\ApiError;
 
 class JsonCseResponseParser implements CseResponseParserInterface
 {
@@ -77,5 +78,18 @@ class JsonCseResponseParser implements CseResponseParserInterface
         }
 
         return $queries;
+    }
+
+    public function parseError($content)
+    {
+        $decodedContent = json_decode($content, true);
+
+        if (isset($decodedContent['error'])) {
+            $error = $decodedContent['error'];
+
+            return new ApiError($error['message'], $error['code']);
+        }
+
+        return null;
     }
 }
