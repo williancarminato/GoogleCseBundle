@@ -8,30 +8,18 @@ use Carminato\GoogleCseBundle\Service\Query\Exception\MissingApiQueryException;
 
 class ApiRequest implements ApiRequestInterface
 {
-    private $url;
+    private $url = 'https://www.googleapis.com/customsearch/v1';
 
     private $query;
 
-    public function __construct($url = null, ApiQueryInterface $query = null)
+    public function __construct(ApiQueryInterface $query = null)
     {
-        $this->url = $url;
         $this->query = $query;
     }
 
     public function getUrl()
     {
-        if (empty($this->url)) {
-            throw new \UnexpectedValueException('The url attribute is missing.');
-        }
-
         return $this->url;
-    }
-
-    public function setUrl($url)
-    {
-        $this->url = $url;
-
-        return $this;
     }
 
     public function getQuery()
