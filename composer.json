@@ -20,5 +20,10 @@
             "Carminato\\GoogleCseBundle" : ""
         }
     },
-    "target-dir": "Carminato/GoogleCseBundle"
+    "target-dir": "Carminato/GoogleCseBundle",
+      "extra": {
+        "branch-alias": {
+            "dev-develop": "2.4.x-dev"
+        }
+    }
 }
