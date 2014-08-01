@@ -1,4 +1,4 @@
-GoogleCseBundle [![Build Status](https://travis-ci.org/williancarminato/GoogleCseBundle.png?branch=develop)](https://travis-ci.org/williancarminato/GoogleCseBundle)
+GoogleCseBundle [![Build Status](https://travis-ci.org/williancarminato/GoogleCseBundle.png?branch=develop)](https://travis-ci.org/williancarminato/GoogleCseBundle) [![SensioLabsInsight](https://insight.sensiolabs.com/projects/8cc1ec21-d475-4e26-9e7f-d2b7fc86a4f6/small.png)](https://insight.sensiolabs.com/projects/8cc1ec21-d475-4e26-9e7f-d2b7fc86a4f6)
 ===============
 
 A Symfony2 Bundle who uses Google Custom Search API.
