@@ -9,4 +9,6 @@ interface CseResponseParserInterface
     public function parseQueries($content);
 
     public function parseError($content);
+
+    public function parseSearchInformation($content);
 }

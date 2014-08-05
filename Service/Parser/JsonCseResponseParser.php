@@ -7,6 +7,7 @@ use Carminato\GoogleCseBundle\Model\CseApiResultItem;
 use Carminato\GoogleCseBundle\Model\CseApiResultQueriesBag;
 use Carminato\GoogleCseBundle\Model\CseApiResultQuery;
 use Carminato\GoogleCseBundle\Model\CseApiResultQueryItem;
+use Carminato\GoogleCseBundle\Model\CseApiResultSearchInformation;
 use Carminato\GoogleCseBundle\Service\ApiError;
 
 class JsonCseResponseParser implements CseResponseParserInterface
@@ -91,5 +92,21 @@ class JsonCseResponseParser implements CseResponseParserInterface
         }
 
         return null;
+    }
+
+    public function parseSearchInformation($content)
+    {
+        $decodedContent = json_decode($content, true);
+
+        if (!isset($decodedContent['searchInformation'])) {
+            return "";
+        }
+
+        $searchInformation = $decodedContent['searchInformation'];
+
+        return new CseApiResultSearchInformation(
+            $searchInformation['searchTime'],
+            $searchInformation['totalResults']
+        );
     }
 }

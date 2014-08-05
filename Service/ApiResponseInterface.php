@@ -6,5 +6,7 @@ interface ApiResponseInterface {
 
     public function getResults();
 
+    public function getSearchInformation();
+
     public function getQueries();
 } 

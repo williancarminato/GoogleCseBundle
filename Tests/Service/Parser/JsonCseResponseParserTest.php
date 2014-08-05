@@ -60,5 +60,20 @@ class JsonCseResponseParserTest extends \PHPUnit_Framework_TestCase
 
         $this->assertInstanceOf('\Carminato\GoogleCseBundle\Service\ApiError', $error);
     }
+
+    public function testParseSearchInformationWithCseResponseContentShouldSuccess()
+    {
+        $parser = new JsonCseResponseParser();
+
+        $searchInformation = $parser->parseSearchInformation($this->okResponse);
+
+        $this->assertInstanceOf(
+            '\Carminato\GoogleCseBundle\Model\CseApiResultSearchInformation',
+            $searchInformation
+        );
+
+        $this->assertEquals('0.378144', $searchInformation->getSearchTime());
+        $this->assertEquals('73400', $searchInformation->getTotalResults());
+    }
 }
  
