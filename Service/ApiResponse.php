@@ -25,21 +25,6 @@ class ApiResponse implements ApiResponseInterface
         return $this->parser->parseResults($this->content);
     }
 
-    public function getPromotions()
-    {
-        // TODO: Implement getPromotions() method.
-    }
-
-    public function getUrl()
-    {
-        // TODO: Implement getUrl() method.
-    }
-
-    public function getRaw()
-    {
-        // TODO: Implement getRaw() method.
-    }
-
     /**
      * @return CseApiResultQueriesBag
      */
